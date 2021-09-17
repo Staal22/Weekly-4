@@ -243,7 +243,7 @@ void task4()
             }
 
             dice[i] = diceroll();
-        }
+}
 
         for (int j = 0; j < 5; j++) {
             if (dice[j] == 6) {
