@@ -181,29 +181,35 @@ void task2()
 void task3()
 {
     struct People {
+        int id{};
         std::string name{};
         long phone{};
-    };
+    } p[10];
 
     int amount{};
-
-    std::string names[10] = {};
-    long phonenumbers[10] = {};
 
     std::cout << "How many people would you like to input info for? (max 10) : ";
     std::cin >> amount;
 
     for (int i = 0; i < amount; i++) {
-        std::cout << "The name of person " << amount << " is : ";
-        std::cin >> names[i];
-        std::cout << "The phone number of person " << amount << " is : ";
-        std::cin >> phonenumbers[i];
+        p[i].id = i + 1;
+        std::cout << "For person number " << p[i].id << "," << std::endl;
+
+        std::cout << "Enter name : ";
+        std::cin >> p[i].name;
+
+        std::cout << "Enter phone number : ";
+        std::cin >> p[i].phone;
+
+        std::cout << std::endl;
     }
 
-    for (int j = 0; j < amount; j++) {
-        People joe = { names[j], phonenumbers[j] };
+    for (int j = 0; j < amount; j++)
+    {
+        std::cout << "Id number : " << j + 1 << std::endl;
+        std::cout << "Name : " << p[j].name << std::endl;
+        std::cout << "Phone number : " << p[j].phone << std::endl;
     }
-
     
 }
 
