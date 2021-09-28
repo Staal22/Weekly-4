@@ -1,12 +1,4 @@
-#include <iostream>
-#include <conio.h>
-
-
-void clearCin();
-void task1();
-void task2();
-void task3();
-void task4();
+#include "Main.h"
 
 float Calculate(float n1, float n2, char operation) {
 
